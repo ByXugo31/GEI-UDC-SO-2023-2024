@@ -17,6 +17,7 @@ En este repositorio están almacenados los enunciados de estas prácticas, el ma
 ## **Fallos conocidos y notas a tener en cuenta**
 
 **Todos estos fallos no serán arreglados**
+**(Si hay algún otro fallo a parte de los notificados, hazmelo saber para añadirlo a esta lista)**
 
 -La entrada, salida y error estandar se da por supuesto que se inicializan como O_RDWR, habría que inicializarlas con los permisos correspondientes.
 
