@@ -14,7 +14,7 @@ En este repositorio están almacenados los enunciados de estas prácticas, el ma
 
 
 
-## **--FALLOS CONOCIDOS Y NOTAS A TENER EN CUENTA--**
+## **Fallos conocidos y notas a tener en cuenta**
 
 **Todos estos fallos no serán arreglados**
 
@@ -24,13 +24,12 @@ En este repositorio están almacenados los enunciados de estas prácticas, el ma
 
 -La implementación de la lista es bastante chapucera, recomiendo usar otra lista y cambiar todas las funciones que dependan de la lista.
 
--Recomiendo usar el struct cmdList, tan solo hay que modificar NUM_COMMANDS en el .h en función de los comandos a añadir o quitar, en el .c añadir o quitar elementos, en p3.c, en el switch, añadir o quitar elementos según los comandos que tengais
-NOTA: Tiene mucho margen de mejora, tenía planeado añadir punteros a funciones dentro del struct pero por desgracia no he tenido tiempo para implementarlo.
+-Recomiendo no usar cmdList ni el .c ni el .h, puede ser un poco engorroso de usar y de entender, aunque si se sabe usar, recomiendo modificarlo de manera que se adapte a lo que se pide y también un comentario dejando créditos, ya que si no se deja un comentario especificando eso, existe un alto riesgo de copia.
 
--Las listas declaradlas globalmente, así no perdeis tiempo pasándoselas a todos los comandos.
+-Las listas se deberían declarar globalmente.
 
 -Lo que si recomiendo es mirar cmnds.c, ya que tiene la funcionalidad de todos los comandos.
 
--Conditional jump en jobs, cuidado.
+-Conditional jump en jobs al ejecutar con valgrind.
 
--Redirigir salida estandar cuando ejecutas un comando en primer plano.
+-Redirigir salida estandar y la entrada cuando ejecutas un comando en primer plano, ya que cuando lo ejecutas, mientras que la terminal no responde, al meter tu inputs, al finalizarse el proceso se van a leer esos inputs, cosa que no debería pasar.
