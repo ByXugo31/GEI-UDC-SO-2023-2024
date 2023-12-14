@@ -1,8 +1,21 @@
-Shell de la asignatura de SO del año 2023/2024 en la UDC.
+## **Shell de la asignatura SO - 2023/2024 Ingeniería Informática UDC.**
+
+
 Más de 3919 lineas de código casi comentadas linea por linea.
 Hay funciones sin ningún tipo de comentario (Comentaré todo más adelante).
 
-FALLOS CONOCIDOS Y NOTAS A TENER EN CUENTA (Cosas que no voy a cambiar ni corregir, cualquier fallo extra hazmelo saber).
+
+
+
+
+
+
+
+
+
+## **--FALLOS CONOCIDOS Y NOTAS A TENER EN CUENTA--**
+
+**Todos estos fallos no serán arreglados**
 
 -La entrada, salida y error estandar se da por supuesto que se inicializan como O_RDWR, habría que inicializarlas con los permisos correspondientes.
 
