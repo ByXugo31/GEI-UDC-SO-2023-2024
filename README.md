@@ -1,4 +1,4 @@
-Shell de la asignatura de SO del año 2023/2024 en UDC.
+Shell de la asignatura de SO del año 2023/2024 en la UDC.
 Más de 3919 lineas de código casi comentadas linea por linea.
 Hay funciones sin ningún tipo de comentario (Comentaré todo más adelante).
 
