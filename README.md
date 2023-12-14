@@ -6,7 +6,8 @@ Hay funciones sin ningún tipo de comentario (Comentaré todo más adelante).
 
 
 
-
+## Contenido del repositorio
+En este repositorio están almacenados los enunciados de estas prácticas, el make y los .c y .h de mi shell, código de ayuda proporcionado por los profesores y una shell de referencia que se nos proporcionó para elaborar los comandos.
 
 
 
