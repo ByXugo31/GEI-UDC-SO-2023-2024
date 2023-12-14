@@ -16,3 +16,7 @@ NOTA: Tiene mucho margen de mejora, tenía planeado añadir punteros a funciones
 -Las listas declaradlas globalmente, así no perdeis tiempo pasándoselas a todos los comandos.
 
 -Lo que si recomiendo es mirar cmnds.c, ya que tiene la funcionalidad de todos los comandos.
+
+-Conditional jump en jobs, cuidado.
+
+-Redirigir salida estandar cuando ejecutas un comando en primer plano.
