@@ -2,7 +2,6 @@
 #define P2_SIGSTRNUM_H
 #endif //P2_SIGSTRNUM_H
 
-#include <libzvbi.h>
 #include "signal.h"
 //Sacada del código de ayuda
 /*las siguientes funciones nos permiten obtener el nombre de una senal a partir
