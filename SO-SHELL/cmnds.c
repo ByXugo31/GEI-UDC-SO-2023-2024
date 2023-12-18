@@ -148,7 +148,7 @@ void updateProcessList(Item *item){
     sprintf(item->data[1],"%d",priority);
     if(pid1==item->posNum){
     	    int signal_number = WTERMSIG(status);
-    	    if (status==0 && getpriority(PRIO_PROCESS,item->posNum)==-1) sprintf(item->data[3],"TERMINATED");
+    	    if (WIFEXITED(status)) sprintf(item->data[3],"TERMINATED");
     	    else if (WIFSIGNALED(status)) strcpy(item->data[3],"SIGNALED");
     	    else if (WIFSTOPPED(status)) strcpy(item->data[3],"STOPPED");
     	    else if (WIFCONTINUED(status)) strcpy(item->data[3],"ACTIVE");
@@ -301,7 +301,7 @@ int BuscarVariable (char * var, char *e[])  /*busca una variable en el entorno q
 }
 
 //Sacada del código de ayuda
-int CambiarVariable(char * var, char * valor, char *e[]) /*cambia una variable en el entorno que se le pasa como parámetro*/
+int CambiarVariable(char * var, char * valor, char *e[], List *EnvList) /*cambia una variable en el entorno que se le pasa como parámetro*/
 {                                                        /*lo hace directamente, no usa putenv*/
     int pos;
     char *aux;
@@ -310,8 +310,10 @@ int CambiarVariable(char * var, char * valor, char *e[]) /*cambia una variable e
         return(-1);
 
     aux=(char *)malloc(strlen(var)+strlen(valor)+2);
+    
     if (aux==NULL)
         return -1;
+    insertEnvVar((void *)aux,EnvList);
     strcpy(aux,var);
     strcat(aux,"=");
     strcat(aux,valor);
@@ -338,6 +340,7 @@ int SustituirVariable(char * var, char * var2, char * valor, char *e[], List *En
     return (pos);
 }
 
+
 /////////////FUNCIONALIDAD DE LOS COMANDOS/////////////
 
 void authors(char *arg) {
@@ -362,6 +365,7 @@ void authors(char *arg) {
     //Si el argumento no es ni -l ni -n se imprime un error.
     perror("Invalid argument, use -n or -l.");
 }
+
 
 void pid(char *arg) {
     //Si el argumento es nulo o está vacio...
@@ -811,6 +815,8 @@ void list_aux(char *directory,bool hid,bool reca,bool recb,bool lng,bool link,bo
             closedir(dir);
         }
     } else return;
+
+
 }
 
 void list(char *tr[]) {
@@ -1543,12 +1549,12 @@ void showvar(char *tr[],char *arg3[]){
 void changevar(char *tr[],char *arg3[],List *EnvList){
     if (tr[1]!=NULL && tr[1][0]!='\0' && tr[2]!=NULL && tr[2][0]!='\0' && tr[3]!=NULL && tr[3][0]!='\0'){
         if(strcmp(tr[1],"-a")==0){
-            int val = CambiarVariable(tr[2],tr[3],arg3);
+            int val = CambiarVariable(tr[2],tr[3],arg3,EnvList);
             if(val==-1) perror("Error changing variable.");
             return;
         }
         if(strcmp(tr[1],"-e")==0){
-            if(CambiarVariable(tr[2],tr[3],environ)==-1) perror("Error changing variable.");
+            if(CambiarVariable(tr[2],tr[3],environ,EnvList)==-1) perror("Error changing variable.");
             return;
         }
         if(strcmp(tr[1],"-p")==0){
@@ -1569,7 +1575,7 @@ void subsvar(char *tr[],char *arg3[],List *EnvList){
             return;
         }
         if(strcmp(tr[1],"-e")==0){
-            if(SustituirVariable(tr[2],tr[3],tr[4],arg3,EnvList)==-1) perror("Error changing variable.");
+            if(SustituirVariable(tr[2],tr[3],tr[4],environ,EnvList)==-1) perror("Error changing variable.");
             return;
         }
         return;
