@@ -34,3 +34,10 @@ En este repositorio están almacenados los enunciados de estas prácticas, el ma
 -Conditional jump en jobs al ejecutar con valgrind.
 
 -Redirigir salida estandar y la entrada cuando ejecutas un comando en primer plano, ya que cuando lo ejecutas, mientras que la terminal no responde, al meter tu inputs, al finalizarse el proceso se van a leer esos inputs, cosa que no debería pasar.
+
+##**NOTAS:**
+P1:0.30  
+P2:0.85
+P3:0.85
+Total:2/2.5
+
