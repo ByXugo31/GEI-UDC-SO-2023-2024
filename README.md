@@ -37,7 +37,7 @@ En este repositorio están almacenados los enunciados de estas prácticas, el ma
 
 ## **NOTAS:**
 P1:0.30  
-P2:0.85
-P3:0.85
+P2:0.85  
+P3:0.85  
 Total:2/2.5
 
