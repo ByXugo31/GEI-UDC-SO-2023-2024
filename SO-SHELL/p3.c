@@ -1,7 +1,6 @@
 /////////////AUTHORS/////////////
 /*
 BY: @ByXugo31 -> GITHUB
-OTHER MEDIA: @xxugoo -> ig     IPlayOnToaster_ -> Twitch
 */
 
 #include "cmdList.h"
