@@ -4,7 +4,7 @@
 Más de 3919 lineas de código casi comentadas linea por linea.
 Hay funciones sin ningún tipo de comentario (Comentaré todo más adelante).
 
-
+**CUALQUIER DUDA, PONERSE EN CONTACTO CONMIGO VIA WHATSAPP (EN CASO DE TENER MI NÚMERO) O VIA INSTAGRAM (ESTÁ VINCULADO A MI PERFIL DE GITHUB)**
 
 ## Contenido del repositorio
 En este repositorio están almacenados los enunciados de estas prácticas, el make y los .c y .h de mi shell, código de ayuda proporcionado por los profesores y una shell de referencia que se nos proporcionó para elaborar los comandos.
